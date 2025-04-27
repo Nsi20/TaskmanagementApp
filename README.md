@@ -1,44 +1,30 @@
 # TaskMaster - Task Management Application
 
-A full-featured task management application built with Django and Django REST Framework.
+A full-stack task management application built with Django and MySQL.
 
 ## Features
-
 - User authentication and authorization
-- Create, read, update, and delete tasks
-- Task prioritization and status tracking
+- Task creation, editing, and deletion
+- Priority levels and status tracking
 - RESTful API endpoints
 - Responsive Bootstrap UI
-- MySQL database integration
 
-## Technologies Used
-
-- Python 3.x
+## Tech Stack
 - Django 5.2
 - Django REST Framework
 - MySQL
 - Bootstrap 5
-- HTML/CSS
-- JavaScript
+- HTML/CSS/JavaScript
 
-## Live Demo
-
-[View Live Demo](your-deployed-url-here)
-
-## Screenshots
-
-![TaskMaster Dashboard](screenshots/dashboard.png)
-![Task Creation](screenshots/create-task.png)
-
-## Local Development
+## Local Development Setup
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/taskmaster.git
-cd taskmaster
+git clone https://github.com/Nsi20/TaskmanagementApp.git
+cd TaskmanagementApp
 ```
 
-2. Create a virtual environment:
+2. Create and activate virtual environment:
 ```bash
 python -m venv venv
 venv\Scripts\activate
@@ -49,15 +35,16 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Set up environment variables:
-Create a .env file with:
+4. Configure environment variables:
+Create a `.env` file with the following:
 ```
 SECRET_KEY=your-secret-key
 DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
 DB_NAME=taskmaster
 DB_USER=your-db-user
 DB_PASSWORD=your-db-password
-DB_HOST=localhost
+DB_HOST=127.0.0.1
 DB_PORT=3306
 ```
 
@@ -66,30 +53,16 @@ DB_PORT=3306
 python manage.py migrate
 ```
 
-6. Start the development server:
+6. Start development server:
 ```bash
 python manage.py runserver
 ```
 
-## API Documentation
-
-### Endpoints
-
-- `GET /api/tasks/` - List all tasks
-- `POST /api/tasks/` - Create a new task
-- `GET /api/tasks/{id}/` - Retrieve a task
-- `PUT /api/tasks/{id}/` - Update a task
-- `DELETE /api/tasks/{id}/` - Delete a task
-- `POST /api/tasks/{id}/complete/` - Mark task as complete
-
 ## Deployment
+The application is configured for deployment on Render.com with MySQL database support.
 
-This application is deployed on [Platform Name] using [Technology Stack].
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## API Documentation
+Access the API at `/api/tasks/` for task management operations.
 
 ## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+MIT License
